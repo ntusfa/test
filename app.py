@@ -1,12 +1,12 @@
-from flask import Flask, request, jsonify
+rom flask import Flask, request, jsonify
 import redis
 import os
 
 app = Flask(__name__)
 
 # 獲取 Upstash Redis 的 URL 和密鑰
-# redis_url = os.getenv('UPSTASH_REDIS_URL')
-# redis_client = redis.from_url(redis_url)
+redis_url = os.getenv('UPSTASH_REDIS_URL')
+redis_client = redis.from_url(redis_url)
 
 @app.route('/')
 def home():
