@@ -8,3 +8,6 @@ MarkupSafe==2.1.1
 Werkzeug==2.2.2
 zipp==3.10.0
 redis==5.0.7
+pandas
+numpy
+openpyxl

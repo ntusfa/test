@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import redis
 
 # connect to redis
@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return r.get('name')
+    return render_template('html/index.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
